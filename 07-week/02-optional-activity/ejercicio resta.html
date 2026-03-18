@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Main </span><span class="s2">{</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Hello and welcome to Java!&quot;</span><span class="s2">);</span>
+
+        <span class="s4">// Construir scanner</span>
+        <span class="s1">Scanner scanner </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+
+        <span class="s4">// Definir el tamaño del vector</span>
+        <span class="s0">int </span><span class="s1">count </span><span class="s2">= </span><span class="s5">0</span><span class="s2">;</span>
+
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">count </span><span class="s2">== </span><span class="s5">0</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Enter the size of the vector: &quot;</span><span class="s2">);</span>
+            <span class="s1">count </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextInt</span><span class="s2">();</span>
+        <span class="s2">}</span>
+
+        <span class="s4">// Crear vectores</span>
+        <span class="s1">Double</span><span class="s2">[] </span><span class="s1">vectorA </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Double</span><span class="s2">[</span><span class="s1">count</span><span class="s2">];</span>
+        <span class="s1">Double</span><span class="s2">[] </span><span class="s1">vectorB </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Double</span><span class="s2">[</span><span class="s1">count</span><span class="s2">];</span>
+        <span class="s1">Double</span><span class="s2">[] </span><span class="s1">vectorC </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Double</span><span class="s2">[</span><span class="s1">count</span><span class="s2">];</span>
+
+        <span class="s0">int </span><span class="s1">i</span><span class="s2">;</span>
+
+        <span class="s4">// Llenar Vector A</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">vectorA</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">vectorA</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] = (</span><span class="s0">double</span><span class="s2">) (</span><span class="s1">i </span><span class="s2">+ </span><span class="s5">5</span><span class="s2">);   </span><span class="s4">// valores diferentes</span>
+        <span class="s2">}</span>
+
+        <span class="s4">// Llenar Vector B</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">vectorB</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">vectorB</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] = </span><span class="s1">vectorA</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] + </span><span class="s5">3</span><span class="s2">;     </span><span class="s4">// otros valores</span>
+        <span class="s2">}</span>
+
+        <span class="s4">// RESTA A - B</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">vectorC</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">vectorC</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] = </span><span class="s1">vectorA</span><span class="s2">[</span><span class="s1">i</span><span class="s2">] - </span><span class="s1">vectorB</span><span class="s2">[</span><span class="s1">i</span><span class="s2">];</span>
+        <span class="s2">}</span>
+
+        <span class="s4">// Mostrar resultados</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Vector A:&quot;</span><span class="s2">);</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">vectorA</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s1">vectorA</span><span class="s2">[</span><span class="s1">i</span><span class="s2">].</span><span class="s1">intValue</span><span class="s2">() + </span><span class="s3">&quot; - &quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Vector B:&quot;</span><span class="s2">);</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">vectorB</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s1">vectorB</span><span class="s2">[</span><span class="s1">i</span><span class="s2">].</span><span class="s1">intValue</span><span class="s2">() + </span><span class="s3">&quot; - &quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">Vector C (A - B):&quot;</span><span class="s2">);</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s1">i </span><span class="s2">= </span><span class="s5">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">vectorC</span><span class="s2">.</span><span class="s1">length</span><span class="s2">; </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s1">vectorC</span><span class="s2">[</span><span class="s1">i</span><span class="s2">].</span><span class="s1">intValue</span><span class="s2">() + </span><span class="s3">&quot; - &quot;</span><span class="s2">);</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>
